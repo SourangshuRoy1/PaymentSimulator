@@ -4,8 +4,7 @@ This is a single-page application in NodeJS that is a replacement of the JMR Jav
 # Application Key Features -
 # TCP Socket:
 
--NodeJS Module: net
--TCP Socket Ports: 25000 and 25001
+NodeJS Module: net   |   TCP Socket Ports: 25000 and 25001
 
 The communication between Payment Service and Payment Simulator is done via Sockets with port numbers 25000 and 25001, same as in actual JMR application, and hence no change is required at Payment Service end. The NodeJS 'net' module from Node Package Manager(NPM) is used to create two TCP Servers to both listen and write at ports 25000 and 25001 of the two Sockets.
 
