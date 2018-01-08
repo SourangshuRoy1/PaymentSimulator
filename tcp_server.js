@@ -7,7 +7,7 @@ var CARDWAIT_count = 0;
 
 var server1 = net.createServer(function(socket){
 	Socket25001 = socket;
-	socket.write('100,0,45,LoginRequired,\n');	
+	socket.write('100,0,45,LoginRequired,\n');	// message sent to PAyment Service indicating pairing initiation
 	socket.on('data',function(data){
 		console.log('Receiving data at PORT 25001 from PAYMENT SERVICE: '+data.toString());
 	});
@@ -23,8 +23,7 @@ var server1 = net.createServer(function(socket){
 server1.listen(25001,'127.0.0.1');
 
 var server2 = net.createServer(function(socket){
-	//socket.write('I am NodeJS TCP server - created by Sourangshu Roy.');	
-	
+		
 	socket.on('data',function(data){
 		console.log('Receiving data from PAYMENT SERVICE: '+data.toString());//REQINFO,6,0,ALL,-1
 		var data_ps = data.toString();		
