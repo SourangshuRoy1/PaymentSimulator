@@ -1,3 +1,4 @@
+//app uses dummy transaction data
 var net = require('net');
 
 var Socket25001;
